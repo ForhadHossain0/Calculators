@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cal.css">
+</head>
+<body>
+
+
+
+
+
+<!-- Calculator starts here -->
+ <div class="cont">
+ <div class="calsi">
+ <h1>Calculator</h1>  
+
+  <input type="text" id="input" placeholder="0" readonly="">
+  
+  <div class="btns">
+  <div>
+       <button onclick="clear()">c</button> 
+       <button onclick="del()">⌫</button>  
+       <button onclick="AT_add('.')">.</button> 
+       <button onclick="AT_add('/')">/</button>
+  </div>
+   <div>
+       <button onclick="AT_add(7)">7</button> 
+       <button onclick="AT_add(8)">8</button>
+       <button onclick="AT_add(9)">9</button> 
+       <button onclick="AT_add('*')">*</button>
+  </div>
+   <div>
+       <button onclick="AT_add(4)">4</button>
+       <button onclick="AT_add(5)">5</button>
+       <button onclick="AT_add(6)">6</button>
+       <button onclick="AT_add('-')">-</button>
+   </div>
+  <div>
+       <button onclick="AT_add(1)">1</button>
+       <button onclick="AT_add(2)">2</button>
+       <button onclick="AT_add(3)">3</button>
+       <button onclick="AT_add('+')">+</button>
+   </div>
+  
+  </div>
+  
+  
+  <div>
+    <button  onclick="AT_add(0)">0</button>     
+    <button  onclick="AT_add('00')">00</button>  
+    <button class="down" onclick="equal()">=</button>
+  </div>
+  
+  
+  </div>
+  </div>
+  
+  
+  
+  <style>
+  
+  .cont{
+    position:relative; width:100%; padding:0; margin:0; text-align:center;
+    }
+    
+  .calsi{
+   width:420px; height:750px;padding:0;margin:100px auto;text-align:center;background:#73a8a2;box-shadow:0px 30px 15px 10px rgba(6, 6, 9, 0.4);border: 1px double rgb(108, 218, 240);
+    }
+  
+  .calsi h1{
+        font-family:monospace;font-weight: 30px;color:rgb(7, 4, 4);      padding:8px 0px;border-radius: 20px;font-size: 40px;
+        /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */
+        }
+  
+  #input{
+    position:relative; width:94%; height: 90px; padding:8px 0px; text-align:right; font-size:58px; font-family:arial;
+    font-weight:normal;color:#222;outline:none;border:none;border-radius: 10px;background:white;
+    }
+  
+  .btnss{
+    position:relative; width:100%; padding:10px 0px;
+    }
+  
+  .btnss button{
+   border:none; outline:none; width:80px; height:80px; font-size:30px; color:rgb(6, 5, 5); vertical-align:middle;
+  border-radius:200px; background:rgb(252, 250, 250); margin:10px 5px; display:inline-block;
+    }
+  
+  button{
+    border:none; outline:none; width:80px; height:80px; font-size:20px;
+    color:rgb(2, 1, 1);vertical-align:middle;background:rgb(255, 246, 246);margin:10px 5px;
+    display:inline-block; border-radius:400px;  transition: 0.2s;
+    box-shadow: rgba(1, 0, 0, 0.16) 0px 8px 9px, rgba(3, 2, 2, 0.23) 0px 8px 9px;
+    }
+  
+    button:hover{ background-color: rgb(78, 148, 234); }
+    
+  /* (= its here)*/
+  .down{
+        width: 165px; height:60px;border-radius:35px;
+     }
+  
+  
+  </style>
+  
+  
+  <script>
+  
+    var input = document.getElementById("input");
+    
+    function AT_add(myValue){   
+      input.value+= myValue; 
+    }
+
+    function clear(){
+      input.value="";
+      }
+
+    function equal(){  
+      input.value = eval(input.value); 
+    }
+    
+    function del(){ 
+      input.value = input.value.substr(0,input.value.length-1);
+    }
+    
+    </script> 
+  <!-- calculator ends-->
+  
+
+
+
+
+
+
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+</body>
+</html>
